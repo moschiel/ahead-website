@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Lagu Sans Light";
+  src: url("./font/Lagu-Sans-Light.otf");
+}
+
 *,
 *::after,
 *::before {
@@ -9,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Lagu Sans Light";
 }
 
 .container {
@@ -123,7 +129,7 @@ header .navigation nav ul li a:hover {
   font-size: 3rem;
   width: 50%;
   margin-top: 40px;
-  color: #555555;
+  font-family: "Lagu Sans Light";
 }
 
 .banner-area .container p {
@@ -133,6 +139,9 @@ header .navigation nav ul li a:hover {
   width: 50%;
   margin-top: 30px;
   font-size: 1.5rem;
+  color: #555555;
+  font-family: "Lagu Sans Light";
+  font-weight: 500;
 }
 
 .action-area {
@@ -237,6 +246,7 @@ header .navigation nav ul li a:hover {
   text-transform: uppercase;
   margin-bottom: 50px;
   color: #555555;
+  font-size: 2rem;
 }
 
 .tech-area .container .tech-part {
@@ -283,8 +293,7 @@ header .navigation nav ul li a:hover {
 }
 
 .tech-area .container .tech-part .tech-part__item p {
-  font-size: 1.2rem;
-  padding: 0 10px;
+  font-size: 1rem;
 }
 
 .service-area {
@@ -320,6 +329,7 @@ header .navigation nav ul li a:hover {
   text-transform: uppercase;
   margin: 60px 0 50px 0;
   color: #555555;
+  font-size: 2rem;
 }
 
 .service-area .container .service-part {
@@ -348,10 +358,11 @@ header .navigation nav ul li a:hover {
 
 .service-area .container .service-part .service-part__item img {
   width: 240px;
+  height: 170px;
 }
 
 .service-area .container .service-part .service-part__item h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-top: 20px;
   padding: 0 2px;
 }
@@ -362,7 +373,7 @@ header .navigation nav ul li a:hover {
 
 .service-area .container .service-part .service-part__item ul li {
   list-style-type: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 10px;
   padding: 0 2px;
 }
@@ -399,6 +410,7 @@ header .navigation nav ul li a:hover {
   margin-bottom: 40px;
   text-transform: uppercase;
   color: #555555;
+  font-size: 2rem;
 }
 
 .contact-area .container .contact-part {
@@ -431,10 +443,18 @@ header .navigation nav ul li a:hover {
   height: 50px;
   font-size: 1.2rem;
   padding: 0 20px;
+  border: 2px solid #8f8f9d;
+  font-family: "Lagu Sans Light";
+  color: black;
 }
 
 .contact-area .container .contact-part form input[type="email"] {
   margin-left: 4%;
+}
+
+.contact-area .container .contact-part form input:focus {
+  outline: none;
+  border: 2px solid #ee6578;
 }
 
 .contact-area .container .contact-part form textarea {
@@ -443,15 +463,27 @@ header .navigation nav ul li a:hover {
   font-size: 1.2rem;
   padding: 10px 20px;
   resize: none;
-  height: 200px;
+  height: 180px;
+  border: 2px solid #8f8f9d;
+  outline: none;
+  font-family: "Lagu Sans Light";
+}
+
+.contact-area .container .contact-part form textarea:focus {
+  border: 2px solid #ee6578;
+  color: black;
 }
 
 .contact-area .container .contact-part form button {
   font-size: 1.2rem;
-  padding: 10px 40px;
+  padding: 10px 50px;
   background-color: #555555;
   cursor: pointer;
   color: white;
+  border: none;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  font-family: "Lagu Sans Light";
 }
 
 .contact-area .container .contact-part form button:hover {
@@ -495,7 +527,7 @@ footer .container nav {
 }
 
 footer .container nav h2 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: center;
   color: #555555;
 }
@@ -515,6 +547,7 @@ footer .container nav ul li {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: center;
 }
 
 footer .container nav ul li address {
@@ -527,7 +560,8 @@ footer .container nav ul li address p {
 
 footer .container nav ul li address .title {
   font-weight: 400;
-  font-size: 1.2rem;
+  text-align: center;
+  font-size: 1.25rem;
   margin-bottom: 5px;
 }
 
@@ -549,6 +583,6 @@ footer section {
 
 footer section p {
   color: #fafafa;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */

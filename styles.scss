@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Lagu Sans Light";
+  src: url("./font/Lagu-Sans-Light.otf");
+}
+
 *,
 *::after,
 *::before {
@@ -8,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Lagu Sans Light";
 }
 
 .container {
@@ -91,8 +97,8 @@ header {
       font-size: 3rem;
       width: 50%;
       margin-top: 40px;
-      // color: #810316;
-      color: #555555;
+
+      font-family: "Lagu Sans Light";
     }
 
     p {
@@ -100,6 +106,9 @@ header {
       width: 50%;
       margin-top: 30px;
       font-size: 1.5rem;
+      color: #555555;
+      font-family: "Lagu Sans Light";
+      font-weight: 500;
     }
   }
 }
@@ -166,6 +175,7 @@ header {
       text-transform: uppercase;
       margin-bottom: 50px;
       color: #555555;
+      font-size: 2rem;
     }
 
     .tech-part {
@@ -195,8 +205,7 @@ header {
         }
 
         p {
-          font-size: 1.2rem;
-          padding: 0 10px;
+          font-size: 1rem;
         }
       }
     }
@@ -220,6 +229,7 @@ header {
       text-transform: uppercase;
       margin: 60px 0 50px 0;
       color: #555555;
+      font-size: 2rem;
     }
 
     .service-part {
@@ -235,10 +245,11 @@ header {
 
         img {
           width: 240px;
+          height: 170px;
         }
 
         h2 {
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           margin-top: 20px;
           padding: 0 2px;
         }
@@ -248,7 +259,7 @@ header {
 
           li {
             list-style-type: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             margin-top: 10px;
             padding: 0 2px;
           }
@@ -275,6 +286,7 @@ header {
       margin-bottom: 40px;
       text-transform: uppercase;
       color: #555555;
+      font-size: 2rem;
     }
 
     .contact-part {
@@ -294,9 +306,17 @@ header {
           height: 50px;
           font-size: 1.2rem;
           padding: 0 20px;
+          border: 2px solid #8f8f9d;
+          font-family: "Lagu Sans Light";
+          color: black;
 
           &[type="email"] {
             margin-left: 4%;
+          }
+
+          &:focus {
+            outline: none;
+            border: 2px solid #ee6578;
           }
         }
 
@@ -306,15 +326,26 @@ header {
           font-size: 1.2rem;
           padding: 10px 20px;
           resize: none;
-          height: 200px;
+          height: 180px;
+          border: 2px solid #8f8f9d;
+          outline: none;
+          font-family: "Lagu Sans Light";
+
+          &:focus {
+            border: 2px solid #ee6578;
+            color: black;
+          }
         }
 
         button {
           font-size: 1.2rem;
-          padding: 10px 40px;
+          padding: 10px 50px;
           background-color: #555555;
           cursor: pointer;
           color: white;
+          border: none;
+          transition: 0.3s all;
+          font-family: "Lagu Sans Light";
         }
 
         button:hover {
@@ -337,6 +368,8 @@ footer {
     display: flex;
     align-items: center;
     padding: 0;
+    max-width: 1000px;
+    width: 100%;
 
     .logo img {
       width: 200px;
@@ -344,36 +377,36 @@ footer {
 
     nav {
       margin-left: auto;
-      
-      h2{
-        font-size: 1.4rem;
+
+      h2 {
+        font-size: 1.2rem;
         text-align: center;
-        color: #555555;
+        color: #555555;    
       }
 
-      ul{
+      ul {
         display: flex;
         margin-top: 10px;
-        
-        li{
+
+        li {
           list-style-type: none;
           display: flex;
           justify-content: space-between;
-
-          address{
+          text-align: center;
+          
+          address {
             padding: 10px;
             
-            p{
+            p {
               font-style: normal;
             }
-
-            .title{
+            
+            .title {
               font-weight: 400;
-              font-size: 1.2rem;
+              text-align: center;
+              font-size: 1.25rem;
               margin-bottom: 5px;
             }
-
-            
           }
         }
       }
@@ -391,7 +424,7 @@ footer {
 
     p {
       color: #fafafa;
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
   }
 }
