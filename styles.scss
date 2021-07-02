@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 html {
@@ -77,38 +78,43 @@ header {
 
 .banner-area {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: #f8f8f8;
 
-  background-image: url("./images/semiconductor-abstract-work.png");
-  background-size: 40%;
+  background-image: url("./images/circuit-three.png");
+  background-size: 50% 100%;
   background-repeat: no-repeat;
-  background-position: 85% 130%;
+  background-position:right -40% bottom -130%;
+
+  .image-2{
+    width: 13%;
+    height: 100%;
+
+    background-image: url('./images/processor-edit-size-black.png');
+    background-position: center;
+    background-size: cover;
+  }
 
   .container {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 
     h1 {
-      font-size: 3rem;
-      width: 50%;
-      margin-top: 40px;
-
+      font-size: 3.5rem;
       font-family: "Lagu Sans Light";
+      font-weight: 900;
+      width: 70%;
     }
-
+    
     p {
+      width: 60%;
       display: flex;
-      width: 50%;
-      margin-top: 30px;
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: #555555;
       font-family: "Lagu Sans Light";
       font-weight: 500;
+      margin-top: 40px;
     }
   }
 }
@@ -140,18 +146,17 @@ header {
 
       .action-part__item {
         width: 30%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
 
         img {
-          width: 110px;
-          height: 110px;
+          width: 90px;
+          height: 90px;
         }
 
         h3 {
           color: #555555;
-          margin-left: 10px;
+          font-size: 1.3rem;
+          margin-bottom: 20px;
+          text-transform: uppercase;
         }
       }
     }
@@ -205,7 +210,7 @@ header {
         }
 
         p {
-          font-size: 1rem;
+          font-size: 1.2rem;
         }
       }
     }
@@ -259,8 +264,8 @@ header {
 
           li {
             list-style-type: none;
-            font-size: 1rem;
-            margin-top: 10px;
+            font-size: 1.2rem;
+            margin-top: 15px;
             padding: 0 2px;
           }
         }

@@ -10,6 +10,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-size: 16px;
 }
 
 html {
@@ -95,21 +96,23 @@ header .navigation nav ul li a:hover {
 
 .banner-area {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #f8f8f8;
-  background-image: url("./images/semiconductor-abstract-work.png");
-  background-size: 40%;
+  background-image: url("./images/circuit-three.png");
+  background-size: 50% 100%;
   background-repeat: no-repeat;
-  background-position: 85% 130%;
+  background-position: right -40% bottom -130%;
+}
+
+.banner-area .image-2 {
+  width: 13%;
+  height: 100%;
+  background-image: url("./images/processor-edit-size-black.png");
+  background-position: center;
+  background-size: cover;
 }
 
 .banner-area .container {
@@ -120,28 +123,25 @@ header .navigation nav ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .banner-area .container h1 {
-  font-size: 3rem;
-  width: 50%;
-  margin-top: 40px;
+  font-size: 3.5rem;
   font-family: "Lagu Sans Light";
+  font-weight: 900;
+  width: 70%;
 }
 
 .banner-area .container p {
+  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
-  margin-top: 30px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #555555;
   font-family: "Lagu Sans Light";
   font-weight: 500;
+  margin-top: 40px;
 }
 
 .action-area {
@@ -193,25 +193,18 @@ header .navigation nav ul li a:hover {
 
 .action-area .container .action-part .action-part__item {
   width: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .action-area .container .action-part .action-part__item img {
-  width: 110px;
-  height: 110px;
+  width: 90px;
+  height: 90px;
 }
 
 .action-area .container .action-part .action-part__item h3 {
   color: #555555;
-  margin-left: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .tech-area {
@@ -293,7 +286,7 @@ header .navigation nav ul li a:hover {
 }
 
 .tech-area .container .tech-part .tech-part__item p {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .service-area {
@@ -373,8 +366,8 @@ header .navigation nav ul li a:hover {
 
 .service-area .container .service-part .service-part__item ul li {
   list-style-type: none;
-  font-size: 1rem;
-  margin-top: 10px;
+  font-size: 1.2rem;
+  margin-top: 15px;
   padding: 0 2px;
 }
 
@@ -516,6 +509,8 @@ footer .container {
       -ms-flex-align: center;
           align-items: center;
   padding: 0;
+  max-width: 1000px;
+  width: 100%;
 }
 
 footer .container .logo img {
