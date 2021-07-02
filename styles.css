@@ -130,6 +130,7 @@ header .navigation nav ul li a:hover {
   font-family: "Lagu Sans Light";
   font-weight: 900;
   width: 70%;
+  color: #F06862;
 }
 
 .banner-area .container p {
@@ -173,11 +174,6 @@ header .navigation nav ul li a:hover {
           align-items: center;
 }
 
-.action-area .container h1 {
-  text-transform: uppercase;
-  margin-bottom: 50px;
-}
-
 .action-area .container .action-part {
   width: 100%;
   display: -webkit-box;
@@ -205,6 +201,7 @@ header .navigation nav ul li a:hover {
   font-size: 1.3rem;
   margin-bottom: 20px;
   text-transform: uppercase;
+  color: #F06862;
 }
 
 .tech-area {
@@ -240,6 +237,7 @@ header .navigation nav ul li a:hover {
   margin-bottom: 50px;
   color: #555555;
   font-size: 2rem;
+  color: #F06862;
 }
 
 .tech-area .container .tech-part {
@@ -321,7 +319,7 @@ header .navigation nav ul li a:hover {
 .service-area .container h1 {
   text-transform: uppercase;
   margin: 60px 0 50px 0;
-  color: #555555;
+  color: #F06862;
   font-size: 2rem;
 }
 
@@ -404,6 +402,7 @@ header .navigation nav ul li a:hover {
   text-transform: uppercase;
   color: #555555;
   font-size: 2rem;
+  color: #F06862;
 }
 
 .contact-area .container .contact-part {
@@ -524,7 +523,7 @@ footer .container nav {
 footer .container nav h2 {
   font-size: 1.2rem;
   text-align: center;
-  color: #555555;
+  color: #F06862;
 }
 
 footer .container nav ul {
