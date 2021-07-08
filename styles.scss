@@ -1,3 +1,5 @@
+@import "./shared";
+
 @font-face {
   font-family: "Lagu Sans Light";
   src: url("./font/Lagu-Sans-Light.otf");
@@ -42,9 +44,17 @@ header {
     display: flex;
     align-items: center;
 
-    .logo {
-      img {
+    @include for-max-phone-portrait {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    .logo img {
         width: 150px;
+
+        @include for-max-phone-portrait {
+          width: 120px;
+        }
       }
     }
 
@@ -53,13 +63,43 @@ header {
       align-items: center;
       margin-left: auto;
 
+      .menu {
+        display: none;
+
+        @include for-max-phone-portrait {
+          display: block;
+          width: 35px;
+          cursor: pointer;
+        }
+      }
+
       ul {
         display: flex;
         align-items: center;
 
+
+        @include for-max-phone-portrait {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          width: 100%;
+          top: 70px;
+          left: 0;
+        transition: opacity 0.5s ease;
+        opacity: 0;
+      visibility: hidden;
+      background-color: #fafafa;
+        }
+
         li {
           padding: 0 20px;
           list-style-type: none;
+
+          @include for-max-phone-portrait {
+            padding: 10px 0;
+            text-align: center;
+            width: 100%;
+     }
 
           a {
             text-decoration: none;
@@ -67,47 +107,66 @@ header {
             color: #555555;
 
             &:hover {
-              color: #ee6578;
+              color: #fecdd4;
             }
           }
         }
       }
     }
   }
-}
 
 .banner-area {
   width: 100%;
-  height: 100vh;
+  height: 700px;
   display: flex;
   background-color: #f8f8f8;
 
   background-image: url("./images/circuit-three.png");
   background-size: 50% 100%;
   background-repeat: no-repeat;
-  background-position:right -40% bottom -130%;
+  background-position: right -40% bottom -130%;
 
-  .image-2{
+  @include for-max-phone-portrait {
+    background-image: none;
+    height: 500px;
+  }
+
+  .image-2 {
     width: 13%;
     height: 100%;
 
-    background-image: url('./images/processor-edit-size-black.png');
+    background-image: url("./images/processor-edit-size-black.png");
     background-position: center;
     background-size: cover;
+
+    @include for-max-phone-portrait {
+      display: none;
+    }
   }
 
   .container {
     display: flex;
     flex-direction: column;
 
+    @include for-max-phone-portrait {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 20px;
+    }
+
     h1 {
       font-size: 3.5rem;
       font-family: "Lagu Sans Light";
       font-weight: 900;
       width: 70%;
-      color: #F06862;
+      color: #fecdd4;
+
+      @include for-max-phone-portrait {
+        font-size: 2.2rem;
+        width: 100%;
+      }
     }
-    
+
     p {
       width: 60%;
       display: flex;
@@ -116,6 +175,12 @@ header {
       font-family: "Lagu Sans Light";
       font-weight: 500;
       margin-top: 40px;
+
+      @include for-max-phone-portrait {
+        width: 100%;
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
     }
   }
 }
@@ -129,6 +194,10 @@ header {
   justify-content: center;
   background-color: #f8f8f8;
 
+  @include for-max-phone-portrait {
+    height: 200px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -140,20 +209,33 @@ header {
       align-items: center;
       justify-content: center;
 
+      @include for-max-phone-portrait {
+        padding: 0 10px;
+      }
+
       .action-part__item {
         width: 30%;
 
         img {
           width: 90px;
           height: 90px;
+
+          @include for-max-phone-portrait {
+            width: 50px;
+            height: 50px;
+          }
         }
 
         h3 {
-          color: #555555;
           font-size: 1.3rem;
           margin-bottom: 20px;
           text-transform: uppercase;
-          color: #F06862;
+          color: #fecdd4;
+
+          @include for-max-phone-portrait {
+            font-size: 0.8rem;
+            color: black;
+          }
         }
       }
     }
@@ -161,24 +243,29 @@ header {
 }
 
 .tech-area {
-  text-align: center;
-  height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  text-align: center;
+  
   .container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
+    padding: 15px;
+ 
     h1 {
       text-transform: uppercase;
-      margin-bottom: 50px;
-      color: #555555;
+      margin: 120px 0 50px 0;
+      color: #fecdd4;
       font-size: 2rem;
-      color: #F06862;
+      
+      @include for-max-phone-portrait {
+        margin: 120px 0 0 0;
+        font-size: 1.5rem;
+      }
     }
 
     .tech-part {
@@ -186,6 +273,12 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+
+       @include for-max-phone-portrait {
+        width: 100%;
+        flex-direction: column;
+      }
+
 
       .tech-part__item {
         width: 30%;
@@ -195,9 +288,20 @@ header {
         flex-direction: column;
         height: 100%;
 
+        @include for-max-phone-portrait {
+          width: 100%;
+          margin-top: 50px;
+        }
+
+ 
         img {
           width: 150px;
           height: 150px;
+
+          @include for-max-phone-portrait {
+            width: 100px;
+            height: 100px;
+          }
         }
 
         h2 {
@@ -205,10 +309,19 @@ header {
           font-size: 1.5rem;
           text-align: center;
           color: #555555;
+
+          @include for-max-phone-portrait {
+            font-size: 1.2rem;
+            margin: 20px 0 10px 0;
+          }
         }
 
         p {
           font-size: 1.2rem;
+
+          @include for-max-phone-portrait {
+            font-size: 1rem;
+          }
         }
       }
     }
@@ -227,12 +340,17 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
     h1 {
       text-transform: uppercase;
       margin: 60px 0 50px 0;
-      color: #F06862;
+      color: #fecdd4;
       font-size: 2rem;
+
+       @include for-max-phone-portrait {
+        font-size: 1.5rem;
+      }
     }
 
     .service-part {
@@ -241,14 +359,31 @@ header {
       align-items: flex-start;
       justify-content: space-between;
 
+      @include for-max-phone-portrait {
+        width: 100%;
+        height: 80vh;
+      }
+
       .service-part__item {
         display: flex;
         width: 24%;
         flex-direction: column;
 
+        @include for-max-phone-portrait {
+          width: 100%;
+          display: none;
+          padding: 0 20px;
+          transition: display 0.2s;
+        }
+
         img {
           width: 240px;
           height: 170px;
+
+          @include for-max-phone-portrait {
+            width: 100%;
+            height: auto;
+          }
         }
 
         h2 {
@@ -274,7 +409,7 @@ header {
 
 .contact-area {
   text-align: center;
-  height: 100vh;
+  height: 95vh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -288,9 +423,12 @@ header {
     h1 {
       margin-bottom: 40px;
       text-transform: uppercase;
-      color: #555555;
       font-size: 2rem;
-      color: #F06862;
+      color: #fecdd4;
+
+      @include for-max-phone-portrait {
+        font-size: 1.5rem;
+      }
     }
 
     .contact-part {
@@ -314,8 +452,17 @@ header {
           font-family: "Lagu Sans Light";
           color: black;
 
+          @include for-max-phone-portrait {
+            width: 100%;
+          }
+
           &[type="email"] {
             margin-left: 4%;
+
+            @include for-max-phone-portrait {
+              width: 100%;
+              margin: 20px 0 10px 0;
+            }
           }
 
           &:focus {
@@ -350,10 +497,14 @@ header {
           border: none;
           transition: 0.3s all;
           font-family: "Lagu Sans Light";
-        }
+          
+                  &:hover {
+                    background-color: #ee6578;
+                  }
 
-        button:hover {
-          background-color: #ee6578;
+                  @include for-max-phone-portrait {
+                    margin-top: 10px;
+                  }
         }
       }
     }
@@ -361,12 +512,13 @@ header {
 }
 
 footer {
-  height: 200px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: #fafafa;
+  height: auto;
 
   .container {
     display: flex;
@@ -375,41 +527,63 @@ footer {
     max-width: 1000px;
     width: 100%;
 
+    @include for-max-phone-portrait {
+      padding: 20px 15px;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-items: center;
+
+   }
+
     .logo img {
       width: 200px;
+
+      @include for-max-phone-portrait {
+        width: 120px;
+        margin: 20px 0;
+      }
     }
 
     nav {
       margin-left: auto;
+      
+      @include for-max-phone-portrait {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
       h2 {
         font-size: 1.2rem;
         text-align: center;
-        color: #F06862;
+        color: #fecdd4;
       }
 
       ul {
         display: flex;
         margin-top: 10px;
+        justify-content: space-around;
 
         li {
           list-style-type: none;
           display: flex;
           justify-content: space-between;
-          text-align: center;
-          
+
           address {
             padding: 10px;
-            
+
             p {
               font-style: normal;
             }
-            
+
             .title {
               font-weight: 400;
               text-align: center;
               font-size: 1.25rem;
-              margin-bottom: 5px;
+              margin-bottom: 10px;
             }
           }
         }
