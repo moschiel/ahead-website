@@ -13,6 +13,8 @@ $maxDesktop: 1200px;
 //extra large desktop
 $minExtraLargeDesktop: $maxDesktop;
 
+$themeColor: #ffc0ca; //#fecdd4
+
 // Very small devices
 @mixin for-max-phone-portrait {
   @media (max-width: $maxPhonePortrait) {
